@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'pswincom' => [
+        'sender' =>env('PSWINCOM_SENDER'),
+        'username' => env('PSWINCOM_USERNAME'),
+        'password' => env('PSWINCOM_PASSWORD'),
+    ],
 ];

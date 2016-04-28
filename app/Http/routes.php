@@ -17,5 +17,17 @@ Route::auth();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('crew','Crew\CrewController@index');
 
+
+//Route::get('users','Crew\CrewController@index')->middleware(\App\Http\Middleware\IsGlobalAdmin::class);
+
+/*Route::get('users','Crew\CrewController@index')->middleware('global_admin');
+
+Route::get('users','Crew\CrewController@index')->middleware(['global_admin']);
+
+Route::get('users','Crew\CrewController@index',['middelware'], 'global_admin');*/
+
+Route::get('users/sms', 'Users\UserController@sendSms');
+
+Route::get('users', 'Users\UserController@index');
+Route::get('users/create', 'Users\UserController@create');
