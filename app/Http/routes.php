@@ -27,7 +27,14 @@ Route::get('users','Crew\CrewController@index')->middleware(['global_admin']);
 
 Route::get('users','Crew\CrewController@index',['middelware'], 'global_admin');*/
 
-Route::get('users/sms', 'Users\UserController@sendSms');
+Route::resource('user','api\UserController');
 
+
+Route::get('users/sms', 'Users\UserController@sendSms');
+Route::get('users/jsonlist', 'Users\UserController@jsonlist');
+
+Route::get('users/destroy{user}', 'Users\UserController@destroy');
+
+Route::get('users/list', 'Users\UserController@list');
 Route::get('users', 'Users\UserController@index');
 Route::get('users/create', 'Users\UserController@create');

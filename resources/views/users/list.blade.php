@@ -54,6 +54,9 @@
                 </ul>
             </div>
         </div>
+        <div id="app">
+            <user-list></user-list>
+        </div>
     </div>
 
  @stop
